@@ -1,179 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#5D5D5E"
-    tools:context=".driver">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".driver">
 
-    <TextView
-        android:id="@+id/locationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="29dp"
-        android:text="Location"
-        app:layout_constraintEnd_toStartOf="@+id/editLocation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:id="@+id/createLiftBox"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="32dp"
+    android:background="#617A7A7A"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/destinationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="23dp"
-        android:text="Destination"
-        app:layout_constraintEnd_toEndOf="@+id/priceButton"
-        app:layout_constraintEnd_toStartOf="@+id/editDest"
-        app:layout_constraintStart_toEndOf="@+id/priceButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationText" />
+<EditText
+    android:id="@+id/createLiftLiftNameInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Lift Name"
+    android:inputType="textPersonName"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toTopOf="@+id/createLiftBox" />
 
-    <TextView
-        android:id="@+id/priceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:text="Price"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/destinationText" />
+<EditText
+    android:id="@+id/createLiftFLInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="From Location"
+    android:inputType="textPersonName"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftLiftNameInput" />
 
-    <TextView
-        android:id="@+id/dateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="36dp"
-        android:text="Date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceButton" />
+<EditText
+    android:id="@+id/createLiftDestInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Destination"
+    android:inputType="textPersonName"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftFLInput" />
 
-    <EditText
-        android:id="@+id/editLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/locationText"
-        app:layout_constraintTop_toTopOf="parent" />
+<EditText
+    android:id="@+id/createLiftPriceInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Price"
+    android:inputType="number"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftDestInput" />
 
-    <EditText
-        android:id="@+id/editDest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Destination"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/destinationText"
-        app:layout_constraintTop_toTopOf="@+id/editLocation" />
+<EditText
+    android:id="@+id/createLiftSeatsInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Seats Available"
+    android:inputType="number"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftPriceInput" />
 
-    <EditText
-        android:id="@+id/editPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:text="price"
-        app:layout_constraintStart_toStartOf="@+id/editDest"
-        app:layout_constraintTop_toBottomOf="@+id/editDest" />
+<EditText
+    android:id="@+id/createLiftDateInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Date"
+    android:inputType="date"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftSeatsInput" />
 
-    <EditText
-        android:id="@+id/editDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="date"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/editPrice"
-        app:layout_constraintTop_toBottomOf="@+id/editPrice" />
+<EditText
+    android:id="@+id/createLiftTimeInput"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="Time"
+    android:inputType="time"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox"
+    app:layout_constraintTop_toBottomOf="@+id/createLiftDateInput" />
 
-    <TextView
-        android:id="@+id/driverHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="9dp"
-        android:text="Fill out your lift details"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/editLocation"
-        app:layout_constraintStart_toStartOf="parent" />
+<Button
+    android:id="@+id/addLiftBtn2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-6dp"
+    android:backgroundTint="#F44336"
+    android:text="Add Lift"
+    android:textAlignment="center"
+    app:layout_constraintBottom_toTopOf="@+id/createLiftBox"
+    app:layout_constraintEnd_toEndOf="@+id/createLiftBox" />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="time"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/editDate"
-        app:layout_constraintTop_toBottomOf="@+id/editDate" />
-
-    <TextView
-        android:id="@+id/timeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="44dp"
-        android:text="Time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateButton" />
-
-    <Button
-        android:id="@+id/confirmList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="37dp"
-        android:text="LIST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/maskText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
-        android:text="Mask Required?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeText" />
-
-    <Switch
-        android:id="@+id/maskSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/maskText"
-        app:layout_constraintStart_toStartOf="@+id/editTextTime" />
-
-    <Button
-        android:id="@+id/homeButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginBottom="35dp"
-        android:text="HOME"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+<Button
+    android:id="@+id/addLiftCancelBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-6dp"
+    android:backgroundTint="#F44336"
+    android:text="X"
+    android:textAlignment="center"
+    app:layout_constraintBottom_toTopOf="@+id/createLiftBox"
+    app:layout_constraintStart_toStartOf="@+id/createLiftBox" />
 </androidx.constraintlayout.widget.ConstraintLayout>

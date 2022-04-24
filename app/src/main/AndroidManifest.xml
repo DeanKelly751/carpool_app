@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Register_Login">
         <activity
+            android:name=".BookLift"
+            android:exported="false" />
+        <activity
             android:name=".passenger"
             android:exported="false" />
         <activity
