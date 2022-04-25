@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
+    //Declaring different variables
     EditText mEmail,mPassword;
     TextView mRegisterButton;
     Button mLoginButton;
@@ -31,6 +32,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Assigning our earlier declared variables to their xml file ID's
         mEmail    = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
         fAuth = FirebaseAuth.getInstance();
@@ -38,31 +40,32 @@ public class Login extends AppCompatActivity {
         mRegisterButton = findViewById(R.id.registerButton);
         mLoginButton = findViewById(R.id.loginButton);
 
+        //When login button is clicked
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
 
+                //change our email and password to strings
+                //this is to add requirements
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
 
+                //email cannot be empty
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("Email is required");
                     return;
                 }
-
+                //password cannot be empty
                 if(TextUtils.isEmpty(password)){
                     mPassword.setError("Password is required");
                     return;
                 }
 
-                if(password.length() < 6){
-                    mPassword.setError("Try making your password longer");
-                    return;
-                }
 
+                //display progress bar to show user app is loading
                 progressBar.setVisibility(View.VISIBLE);
 
-                //authenticate user
+                //authenticate user with firebase
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -70,6 +73,7 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "User Logged in", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), homepage.class));
                         }else{
+                            //error handling
                             Toast.makeText(Login.this, "Error in logging in!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
@@ -81,6 +85,7 @@ public class Login extends AppCompatActivity {
 
         mRegisterButton.setOnClickListener(new View.OnClickListener(){
             @Override
+            //If you are on login page and need to go to register page
             public void onClick(View v){
                 startActivity(new Intent(getApplicationContext(), Register.class));
             }
