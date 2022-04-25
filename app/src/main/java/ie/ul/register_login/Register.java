@@ -48,6 +48,7 @@ public class Register extends AppCompatActivity {
         mRegisterButton = findViewById(R.id.registerButton);
         mLoginButton = findViewById(R.id.loginButton);
 
+        //connect firebase
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         progressBar = findViewById(R.id.progressBar);
@@ -88,6 +89,7 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
+                            //store user data
                             userId = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userId);
                             //creating user data
